@@ -5,3 +5,7 @@ Author URI: https://jasethomson.com
 Description: Custom theme life
 Version: 1.0
 */
+
+body {
+  background-color: lightblue;
+}
