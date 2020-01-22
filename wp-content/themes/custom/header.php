@@ -3,7 +3,7 @@
 
 <head>
 
-  <title>WP Custom</title>
+  <title></title>
 
   <?php wp_head(); ?>
 </head>
