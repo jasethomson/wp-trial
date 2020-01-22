@@ -11,4 +11,41 @@ function gt_setup(){
 
 add_action("wp_enqueue_scripts", 'gt_setup');
 
+// adding theme support
+
+function gt_init(){
+  add_theme_support("post-thumbnails"); // let's you add photos with blog posts
+  add_theme_support("title-tag"); //sets title of header via wp title section
+  add_theme_support("html5",
+    array('comment-list', 'comment-form', 'search-form') //allows for html
+  );
+}
+
+add_action('after_setup_theme', 'gt_init');
+
+// projects post type
+
+function gt_custom_post_type() { //creates ability to post projects
+  register_post_type("porject",
+    array(
+      'rewrite' => array('slug' => 'projects'),
+      'labels' => array(
+        'name' => 'Projects',
+        'singular_name' => 'Project',
+        'add_new_item' => 'Add New Project',
+        'edit_item' => 'Edit Project'
+      ),
+      'menu-icon' => 'dashicons-clipboard',
+      'public' => true,
+      'has_archive' => true,
+      'supports' => array(
+        'title', 'thumbnail', 'editor', 'excerpt', 'comments'
+      )
+    )
+  );
+}
+
+add_action('init','gt_custom_post_type');
+
+
 ?>
