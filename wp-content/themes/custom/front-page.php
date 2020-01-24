@@ -56,7 +56,7 @@
         <?php
 
         $args = array(
-          'post_type' => 'project',
+          'post_type' => 'Project',
           'posts_per_page' => 2
         );
 
