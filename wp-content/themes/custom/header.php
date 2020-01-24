@@ -33,7 +33,7 @@
   <nav>
     <div id="logo">
       <a href="<?php echo site_url(''); ?>">
-        <img src="<?php echo get_template_directory_uri(); ?> assets/wp-logo.png" alt="wp logo">
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/wp-logo.png" alt="wp logo">
       </a>
     </div>
     <div id="menu-icon">

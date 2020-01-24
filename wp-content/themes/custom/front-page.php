@@ -26,23 +26,23 @@
 
         ?>
 
-        <div class="card">
-          <div class="card-image">
-            <a href="<?php echo the_permalink(); ?>">
-              <img src="<?php echo get_the_post_thumbnail_url(get_the_ID()); ?>" alt="voyage">
-            </a>
-          </div>
+          <div class="card">
+            <div class="card-image">
+              <a href="<?php echo the_permalink(); ?>">
+                <img src="<?php echo get_the_post_thumbnail_url(get_the_ID()); ?>" alt="voyage">
+              </a>
+            </div>
 
-          <div class="card-description">
-            <a href="<?php the_permalink(); ?>">
-              <h3><?php the_title(); ?></h3>
-            </a>
-            <p>
-              <?php echo wp_trim_words(get_the_excerpt(), 30); ?>
-            </p>
-            <a href="<?php the_permalink(); ?>" class="btn-readmore">Read more</a>
+            <div class="card-description">
+              <a href="<?php the_permalink(); ?>">
+                <h3><?php the_title(); ?></h3>
+              </a>
+              <p>
+                <?php echo wp_trim_words(get_the_excerpt(), 30); ?>
+              </p>
+              <a href="<?php the_permalink(); ?>" class="btn-readmore">Read more</a>
+            </div>
           </div>
-        </div>
 
         <?php  }
         wp_reset_query(); ?>
@@ -52,44 +52,42 @@
       <h2 class="section-heading">All Projects</h2>
 
       <section>
-        <div class="card">
-          <div class="card-image">
-            <a href="#">
-              <img src="assets/iphone.jpg" alt="iphone">
-            </a>
+
+        <?php
+
+        $args = array(
+          'post_type' => 'project',
+          'posts_per_page' => 2
+        );
+
+        $blogposts = new WP_Query($args);
+
+        while ($blogposts->have_posts()) {
+          $blogposts->the_post();
+
+        ?>
+
+          <div class="card">
+            <div class="card-image">
+              <a href="<?php echo the_permalink(); ?>">
+                <img src="<?php echo get_the_post_thumbnail_url(get_the_ID()); ?>" alt="voyage">
+              </a>
+            </div>
+
+            <div class="card-description">
+              <a href="<?php the_permalink(); ?>">
+                <h3><?php the_title(); ?></h3>
+              </a>
+              <p>
+                <?php echo wp_trim_words(get_the_excerpt(), 30); ?>
+              </p>
+              <a href="<?php the_permalink(); ?>" class="btn-readmore">Read more</a>
+            </div>
           </div>
 
-          <div class="card-description">
-            <a href="#">
-              <h3>Projects</h3>
-            </a>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam ratione tempora iusto placeat possimus est alias
-              assumenda sit fugiat vel necessitatibus praesentium consectetur totam, accusantium, sunt labore minus quos
-              natus.
-            </p>
-            <a href="#" class="btn-readmore">Read more</a>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-image">
-            <a href="#">
-              <img src="assets/apple-watch.jpg" alt="apple watch">
-            </a>
-          </div>
+        <?php  }
+        wp_reset_query(); ?>
 
-          <div class="card-description">
-            <a href="#">
-              <h3>Projects</h3>
-            </a>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam ratione tempora iusto placeat possimus est alias
-              assumenda sit fugiat vel necessitatibus praesentium consectetur totam, accusantium, sunt labore minus quos
-              natus.
-            </p>
-            <a href="#" class="btn-readmore">Read more</a>
-          </div>
-        </div>
       </section>
 
       <h2 class="section-heading">Source Code</h2>
