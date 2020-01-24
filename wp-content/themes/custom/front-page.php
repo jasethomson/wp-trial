@@ -45,7 +45,7 @@
           </div>
 
         <?php  }
-        wp_reset_query(); ?>
+         ?>
 
       </section>
 
@@ -55,7 +55,7 @@
         <?php
 
         $projectArgs = array(
-          'post_type' => 'projects',
+          'post_type' => 'project',
           'posts_per_page' => 2
         );
 
