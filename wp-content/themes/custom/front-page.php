@@ -14,12 +14,12 @@
 
         <?php
 
-        $blogArgs = array(
+        $args = array(
           'post_type' => 'post',
           'posts_per_page' => 2
         );
 
-        $blogposts = new WP_Query($blogArgs);
+        $blogposts = new WP_Query($args);
 
         while ($blogposts->have_posts()) {
           $blogposts->the_post();
@@ -45,7 +45,7 @@
           </div>
 
         <?php  }
-         ?>
+        wp_reset_query(); ?>
 
       </section>
 
@@ -54,12 +54,12 @@
       <section>
         <?php
 
-        $projectArgs = array(
+        $args = array(
           'post_type' => 'project',
           'posts_per_page' => 2
         );
 
-        $projects = new WP_Query($projectArgs);
+        $projects = new WP_Query($args);
 
         while ($projects->have_posts()) {
           $projects->the_post();
