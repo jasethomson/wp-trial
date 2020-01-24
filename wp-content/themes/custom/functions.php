@@ -26,7 +26,7 @@ add_action('after_setup_theme', 'gt_init');
 // projects post type
 
 function gt_custom_post_type() { //creates ability to post projects
-  register_post_type('project',
+  register_post_type("porject",
     array(
       'rewrite' => array('slug' => 'projects'),
       'labels' => array(
