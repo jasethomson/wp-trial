@@ -52,17 +52,18 @@
       <h2 class="section-heading">All Projects</h2>
 
       <section>
+
         <?php
 
         $args = array(
-          'post_type' => 'blog',
+          'post_type' => 'post',
           'posts_per_page' => 2
         );
 
-        $projects = new WP_Query($args);
+        $blogposts = new WP_Query($args);
 
-        while ($projects->have_posts()) {
-          $projects->the_post();
+        while ($blogposts->have_posts()) {
+          $blogposts->the_post();
 
         ?>
 
