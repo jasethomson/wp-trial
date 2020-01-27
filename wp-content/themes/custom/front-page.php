@@ -6,7 +6,7 @@
     </div>
 
     <main>
-      <a href="<?php echo site_url('/blog'); ?>">
+      <a href="<?php echo site_url('/index.php/blog'); ?>">
         <h2 class="section-heading">All Blogs</h2>
       </a>
 
