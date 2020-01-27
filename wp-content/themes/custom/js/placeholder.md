@@ -1,4 +1,4 @@
- archive.php
+
     <?php get_header(); ?>
 
     <main>
