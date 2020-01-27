@@ -44,7 +44,7 @@
         <a class="active" href="<?php echo site_url(''); ?>">Home</a>
       </li>
       <li>
-        <a href="<?php echo site_url('/blog'); ?>">Blog</a>
+        <a href="<?php echo site_url('/index.php/blog'); ?>">Blog</a>
       </li>
       <li>
         <a href="<?php echo site_url('/projects'); ?>">Projects</a>
