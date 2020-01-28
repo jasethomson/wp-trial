@@ -41,16 +41,24 @@
     </div>
     <ul>
       <li>
-        <a class="active" href="<?php echo site_url(''); ?>">Home</a>
+        <a href="<?php echo site_url(''); ?>"
+          <?php if(is_front_page()) echo 'class="active"' ?>
+        >Home</a>
       </li>
       <li>
-        <a href="<?php echo site_url('/index.php/blog'); ?>">Blog</a>
+        <a href="<?php echo site_url('/index.php/blog'); ?>"
+          <?php if(get_post_type() == 'post') echo 'class="active"' ?>
+        >Blog</a>
       </li>
       <li>
-        <a href="<?php echo site_url('/index.php/projects'); ?>">Projects</a>
+        <a href="<?php echo site_url('/index.php/projects'); ?>"
+          <?php if(get_post_type() == 'project') echo 'class="active"' ?>
+        >Projects</a>
       </li>
       <li>
-        <a href="<?php echo site_url('/index.php/about'); ?>">About</a>
+        <a href="<?php echo site_url('/index.php/about'); ?>"
+        <?php if(is_page('about')) echo 'class="active"' ?>
+        >About</a>
       </li>
       <li>
         <div id="search-icon">

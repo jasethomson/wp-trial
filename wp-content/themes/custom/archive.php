@@ -20,7 +20,6 @@
                 <img src="<?php echo get_the_post_thumbnail_url(get_the_ID()); ?>" alt="voyage">
               </a>
             </div>
-
             <div class="card-description">
               <a href="<?php the_permalink(); ?>">
                 <h3><?php the_title(); ?></h3>
