@@ -26,11 +26,11 @@ while (have_posts()) {
           'author' =>
             '<input placeholder="Name" id="author" name="author" type="text" value="' .
             esc_attr( $commenter['comment_author']) .
-            '" size="30"' . $aria_req . ' /></p>',
+            '" size="30"' . $aria_req . ' />',
           'email' =>
             '<input placeholder="Email" id="email" name="email" value="' .
             esc_attr( $commenter['comment_author_email'] ) .
-            '" size="30"' . $aria_req . ' /></p>',
+            '" size="30"' . $aria_req . ' />',
         );
 
         $args = array(
