@@ -11,7 +11,7 @@ while(have_posts()) {
 
     <?php if(has_post_thumbnail()){ ?>
       <div class="card-image">
-        <img src="<?php echo get_the_post_thumbnail(get_the_ID()); ?>" alt="voyage">
+        <img src="<?php echo get_the_post_thumbnail_url(get_the_ID()); ?>" alt="voyage">
       </div>
       <?php }?>
 
