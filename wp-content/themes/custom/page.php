@@ -1,7 +1,7 @@
 <?php get_header();
 
 while(have_posts()) {
-  have_posts();
+  the_post();
 
 ?>
 <h2 class="page-heading"><?php the_title(); ?></h2>
