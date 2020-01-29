@@ -6,7 +6,7 @@
     </div>
 
     <main>
-      <a href="<?php echo site_url('/blog'); ?>">
+      <a href="<?php echo site_url('/index.php/blog'); ?>">
         <h2 class="section-heading">All Blogs</h2>
       </a>
 
@@ -45,7 +45,8 @@
           </div>
 
         <?php  }
-        wp_reset_query(); ?>
+          wp_reset_query();
+        ?>
 
       </section>
 
@@ -86,7 +87,8 @@
           </div>
 
         <?php  }
-        wp_reset_query(); ?>
+          wp_reset_query();
+        ?>
 
       </section>
 

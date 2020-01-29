@@ -1,7 +1,10 @@
+index.php
+
+
 <?php get_header(); ?>
 
 <main>
-  <a href="<?php echo site_url('/index.php/blog'); ?>">
+  <a href="<?php echo site_url('/blog'); ?>">
     <h2 class="page-heading">All Blogs</h2>
   </a>
 
