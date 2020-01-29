@@ -23,22 +23,29 @@ while (have_posts()) {
 
 
         $fields = array(
-          'author' =>
-            '<input placeholder="Name" id="author" name="author" type="text" value="' .
-            esc_attr( $commenter['comment_author'] ) .
-            '" size="30" . $aria_req . ' /></p>' ,
-          'email'=>
-            '<input placeholder="Email" id="email" name="email" type="text" value="' .
-            esc_attr( $commenter['comment_author_email'] ) .
-            '" size="30"' . $aria_req . ' /></p>',
+        'author' => sprintf(
+        '<p class="comment-form-author">%s %s</p>',
+        sprintf(
+        '<input id="author" name="author" type="text" value="%s" size="30" maxlength="245" %s />',
+        esc_attr( $commenter['comment_author'] ),
+        $html_req
+        )
+        ),
+        'email' => sprintf(
+        '<p class="comment-form-email">%s %s</p>',
+        sprintf(
+        '<input id="email" name="email" %s value="%s" size="30" maxlength="100" aria-describedby="email-notes" %s />',
+        ( $html5 ? 'type="email"' : 'type="text"' ),
+        esc_attr( $commenter['comment_author_email'] ),
+        $html_req
+        )
+        ),
         );
 
         $args = array(
-          'title_reply' => 'Share Your Thoughts',
+        'title_reply' => 'Share Your Thoughts',
         'fields' => $fields,
-        'comment_field' => '<textarea placeholder="Your Comment" id="comment"
-        name="comment" cols="45" rows="8" aria-required="true">' .
-        '</textarea>',
+        'comment_fields' => '<textarea id="comment" name="comment" cols="45" rows="8" maxlength="65525" required="required"></textarea>',
         'comment_notes_before' => '<p class="comment-notes">Your email address will not be published. All fields are required.</p>'
         );
 
