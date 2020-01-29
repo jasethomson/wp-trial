@@ -20,26 +20,57 @@ while (have_posts()) {
         </div>
       </div>
       <div id="comments-section">
-        <?php comment_form();
+
+
+        $fields = array(
+        'author' =>
+        sprintf(
+        '<input placeholder="Name" id="author" name="author" type="text" value="%s" size="30" maxlength="245" %s />',
+        esc_attr( $commenter['comment_author'] ),
+        $html_req
+        )
+        ),
+        'email' =>
+        sprintf(
+        '<input placeholder="Email" id="email" name="email" %s value="%s" size="30" maxlength="100" aria-describedby="email-notes" %s />',
+        ( $html5 ? 'type="email"' : 'type="text"' ),
+        esc_attr( $commenter['comment_author_email'] ),
+        $html_req
+        )
+        );
+
+        $args = array(
+        'title_reply' => 'Share Your Thoughts',
+        'fields' => $fields,
+        'comment_field' => '<textarea placeholder="Your Comment" id="comment" name="comment" cols="45" rows="8" maxlength="65525" required="required"></textarea>',
+        'comment_notes_before' => sprintf(
+          '<p class="comment-notes">%s%s</p>',
+          sprintf(
+          '<span id="email-notes">%s</span>',
+          __( 'Your email address will not be published.' )
+          )
+        );
+
+        <?php comment_form($args);
 
         $comments_number = get_comments_number();
-        if($comments_number !== 0){
-          ?>
-            <div class="comments">
-              <h3>What others say</h3>
-              <ol class="all-comments">
-                <?php
-                $comments = get_comments(array(
-                  'post_id' => $post->ID,
-                  'status' => 'approve'
-                ));
-                wp_list_comments(array(
-                  'per_page' => 15
-                ), $comments);
-                ?>
-              </ol>
-            </div>
-          <?php
+        if ($comments_number !== 0) {
+        ?>
+          <div class="comments">
+            <h3>What others say</h3>
+            <ol class="all-comments">
+              <?php
+              $comments = get_comments(array(
+                'post_id' => $post->ID,
+                'status' => 'approve'
+              ));
+              wp_list_comments(array(
+                'per_page' => 15
+              ), $comments);
+              ?>
+            </ol>
+          </div>
+        <?php
         }
         ?>
       </div>
