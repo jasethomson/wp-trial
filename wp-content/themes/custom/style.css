@@ -477,6 +477,12 @@ footer #social-media-footer ul li a .fa-github:hover {
   text-align: center;
 }
 
+#wp-comment-cookies-consent{
+  padding: 0;
+  box-shadow: none;
+  height: 14px;
+}
+
 /* Comment List  */
 
 .comments {
