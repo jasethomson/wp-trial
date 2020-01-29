@@ -20,26 +20,26 @@ while (have_posts()) {
         </div>
       </div>
       <div id="comments-section">
-
+      <?php
 
         $fields = array(
-        'author' => sprintf(
-        '<p class="comment-form-author">%s %s</p>',
-        sprintf(
-        '<input id="author" name="author" type="text" value="%s" size="30" maxlength="245" %s />',
-        esc_attr( $commenter['comment_author'] ),
-        $html_req
-        )
-        ),
-        'email' => sprintf(
-        '<p class="comment-form-email">%s %s</p>',
-        sprintf(
-        '<input id="email" name="email" %s value="%s" size="30" maxlength="100" aria-describedby="email-notes" %s />',
-        ( $html5 ? 'type="email"' : 'type="text"' ),
-        esc_attr( $commenter['comment_author_email'] ),
-        $html_req
-        )
-        ),
+          'author' => sprintf(
+          '<p class="comment-form-author">%s %s</p>',
+          sprintf(
+          '<input id="author" name="author" type="text" value="%s" size="30" maxlength="245" %s />',
+          esc_attr( $commenter['comment_author'] ),
+          $html_req
+          )
+          ),
+          'email' => sprintf(
+          '<p class="comment-form-email">%s %s</p>',
+          sprintf(
+          '<input id="email" name="email" %s value="%s" size="30" maxlength="100" aria-describedby="email-notes" %s />',
+          ( $html5 ? 'type="email"' : 'type="text"' ),
+          esc_attr( $commenter['comment_author_email'] ),
+          $html_req
+          )
+          ),
         );
 
         $args = array(
@@ -49,7 +49,7 @@ while (have_posts()) {
         'comment_notes_before' => '<p class="comment-notes">Your email address will not be published. All fields are required.</p>'
         );
 
-        <?php comment_form($args);
+        comment_form($args);
 
         $comments_number = get_comments_number();
         if ($comments_number !== 0) {
