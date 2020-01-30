@@ -94,17 +94,16 @@ textarea:focus{
 #sliderMenu #search-btn {
   height: 48px;
   width: 48px;
-  background: white url('assets/search-icon-2.png');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
   position: absolute;
   right: 0;
   top: 0;
   box-shadow: initial;
   transition: .4s;
   cursor: pointer;
-  border: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+  border-top: none;
+  border-bottom: none;
+  border-right: none;
 }
 
 /* Navigation */
@@ -473,10 +472,6 @@ footer #social-media-footer ul li a .fa-github:hover {
 }
 
 #sidebar #search-btn {
-  background: white url('./assets/search-icon-2.png');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
   width: 48px;
   height: 100%;
   position: absolute;
@@ -485,9 +480,15 @@ footer #social-media-footer ul li a .fa-github:hover {
   box-shadow: initial;
   cursor: pointer;
   border-left: 1px solid #ddd;
+  border-top: none;
+  border-bottom: none;
+  border-right: none;
   transition: .4s;
 }
 
+#search-btn:hover {
+  background-color: #3b5998;
+}
 /* Comments Section */
 
 #comments-section{
