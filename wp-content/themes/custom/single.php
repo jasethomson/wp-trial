@@ -39,7 +39,7 @@ while (have_posts()) {
           'title_reply' => 'Share Your Thoughts',
           'fields' => $fields,
           'comment_field' => '<textarea placeholder="Your Comment" id="comment"
-          name="comment" cols="45" rows="8" aria-required="true">' .
+          name="comment" cols="38" rows="8" aria-required="true">' .
           '</textarea>',
           'comment_notes_before' => '<p class="comment-notes">Your email address will not be published. All fields are required.</p>'
         );
