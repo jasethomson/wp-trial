@@ -86,7 +86,7 @@ textarea:focus{
 }
 
 #searchbox input {
-  height: 48px;
+  height: 32px;
   width: 100%;
 }
 
@@ -475,6 +475,12 @@ footer #social-media-footer ul li a .fa-github:hover {
 
 .comment-reply-title {
   text-align: center;
+}
+
+#wp-comment-cookies-consent{
+  padding: 0;
+  box-shadow: none;
+  height: 14px;
 }
 
 /* Comment List  */

@@ -47,5 +47,18 @@ function gt_custom_post_type() { //creates ability to post projects
 
 add_action('init','gt_custom_post_type');
 
+// Sidebar
+
+function gt_widgets(){
+  register_sidebar(
+    array(
+      'name' => 'Main Sidebar',
+      'id' => 'main_sidebar',
+      'after_title' => '</h3>'
+    )
+  );
+}
+
+add_action('widgets_init', 'gt_widgets');
 
 ?>
