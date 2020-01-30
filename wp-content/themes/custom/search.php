@@ -45,7 +45,7 @@
 <?php } else { ?>
 
   <div class="no-results">
-    <h2>Couldn't find any matches for your search</h2>
+    <h2>Couldn't find any results</h2>
     <h3>Try one of the following links:</h3>
     <ul>
       <li><a href="<?php echo site_url('/index.php/blog') ?>">Blogs</a></li>
