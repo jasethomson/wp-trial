@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <?php wp_head(); ?>
-  <title>WP Custom</title>
+  <title>Jase Thomson</title>
 </head>
 
 <body>
@@ -33,7 +33,7 @@
   <nav>
     <div id="logo">
       <a href="<?php echo site_url(''); ?>">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/wp-logo.png" alt="wp logo">
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/jt-logo.png" alt="wp logo">
       </a>
     </div>
     <div id="menu-icon">
