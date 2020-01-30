@@ -10,7 +10,7 @@ while (have_posts()) {
       <div class="card">
         <div class="card-meta-blogpost">
           Posted by <?php the_author(); ?> on <?php the_time('F j, Y'); ?>
-          <?php if(get_post_tyoe() === 'post') { ?>
+          <?php if(get_post_type() === 'post') { ?>
             in <a href="#"><?php echo get_the_category_list(', '); ?></a>
           <?php } ?>
         </div>
