@@ -76,7 +76,7 @@ textarea:focus{
 
 /* search box  */
 #searchbox,
-#slideout-menu #search-btn {
+#sliderMenu #search-btn {
   position: fixed;
   right: 0;
   top: 24px;
@@ -186,7 +186,7 @@ nav ul {
   color: rgb(28, 151, 233);
 }
 
-/* Slideout Menu */
+/* Slider Menu */
 
 #sliderMenu{
   display: none;
@@ -216,7 +216,7 @@ nav ul {
   color: white;
 }
 
-#slideout-menu form {
+#sliderMenu form {
   position: relative;
 }
 
