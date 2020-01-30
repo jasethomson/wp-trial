@@ -1,8 +1,8 @@
     <?php get_header(); ?>
 
     <div id="banner">
-      <h1>WP Custom</h1>
-      <h3>Learn how to help us help you</h3>
+      <h1>Jase Thomson</h1>
+      <h3>Software Developer</h3>
     </div>
 
     <main>
