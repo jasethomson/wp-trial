@@ -62,4 +62,15 @@ function gt_widgets(){
 
 add_action('widgets_init', 'gt_widgets');
 
+// Filters
+
+function search_filter($query) {
+  if($query->is_search()) {
+    $query->set('post_type', array('post', 'project'));
+  }
+}
+
+add_filter('pre_get_posts', 'search_filter');
+
+
 ?>

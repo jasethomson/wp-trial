@@ -466,13 +466,6 @@ footer #social-media-footer ul li a .fa-github:hover {
   transition: .4s;
 }
 
-#sidebar #search-btn:hover {
-  background: #3b5998 url('./assets/search-icon-2.png');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-}
-
 /* Comments Section */
 
 #comments-section{
@@ -569,6 +562,26 @@ footer #social-media-footer ul li a .fa-github:hover {
 .all-comments .children {
   margin-top: 16px;
 }
+
+/* No Results  */
+
+.no-results {
+  text-align: center;
+}
+
+.no-results ul {
+  list-style: none;
+}
+
+.no-results li:hover {
+  cursor: pointer;
+  color: #3b5998;
+}
+
+.no-results h2 {
+  color: red;
+}
+
 
 /* Media Queries */
 
