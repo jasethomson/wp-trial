@@ -466,13 +466,6 @@ footer #social-media-footer ul li a .fa-github:hover {
   transition: .4s;
 }
 
-#sidebar #search-btn:hover {
-  background: #3b5998 url('./assets/search-icon-2.png');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-}
-
 /* Comments Section */
 
 #comments-section{
