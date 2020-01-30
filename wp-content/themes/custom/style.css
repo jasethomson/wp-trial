@@ -75,8 +75,7 @@ textarea:focus{
 }
 
 /* search box  */
-#searchbox,
-#sliderMenu #search-btn {
+#searchbox {
   position: fixed;
   right: 0;
   top: 24px;
@@ -91,7 +90,8 @@ textarea:focus{
   width: 100%;
 }
 
-#searchbox #search-btn {
+#searchbox #search-btn,
+#sliderMenu #search-btn {
   height: 48px;
   width: 48px;
   background: white url('assets/search-icon-2.png');
@@ -104,7 +104,7 @@ textarea:focus{
   box-shadow: initial;
   transition: .4s;
   cursor: pointer;
-  border: 1px solid #dd;
+  border: 1px solid #ddd;
 }
 
 /* Navigation */
